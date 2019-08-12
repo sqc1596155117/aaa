@@ -1,0 +1,32 @@
+http://api.coindesk.com/v1/bpi/currentprice.json
+
+
+get
+
+
+http://www.wwtliu.com/sxtstu/blueberrypai/login.php
+
+post
+
+
+
+// 添加一个请求拦截器
+//发送请求的拦截器
+axios.interceptors.request.use(function (config) {
+    // Do something before request is sent
+    return config;
+  }, function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+  });
+
+//发送前看一下参数是否正确，或者说发送请求头是否有问题会在发送请求之前拦截
+
+// 添加一个响应拦截器
+axios.interceptors.response.use(function (response) {
+    // Do something with response data
+    return response;
+  }, function (error) {
+    // Do something with response error
+    return Promise.reject(error);
+  });
